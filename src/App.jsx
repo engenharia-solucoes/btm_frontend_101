@@ -1,12 +1,19 @@
-import React from "react";
-import Sidebar from "./Sidebar";
+import React from 'react';
+import {BrowserRouter as Router } from 'react-router-dom'
 
-const App = () => {
+import Sidebar from './components/layout/Sidebar'
+import BackTopBtn from './components/content/BackTopBtn';
+
+function App() {
+
   return (
-    <div className="w-full h-screen bg-back object-cover flex items-center">
-      <Sidebar />
+    <div className='flex h-screen w-full bg-gray-200'>
+      <Router>
+        <Sidebar />
+        <BackTopBtn />
+      </Router>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

@@ -1,11 +1,13 @@
-import { RxDashboard } from "react-icons/rx";
-import { MdInsights } from "react-icons/md";
-import { RiCouponLine } from "react-icons/ri";
-import { FiUser, FiLogOut } from "react-icons/fi";
-import { AiOutlineMessage } from "react-icons/ai";
-import { BsFolder, BsWallet2 } from "react-icons/bs";
+// Datas
+import user from "./assets/user.jpg";
 
-export const datas = [
+// Icons
+import { RxDashboard } from "react-icons/rx";
+import { TbWorld } from "react-icons/tb";
+import { FiLogOut, FiSettings} from "react-icons/fi";
+import { AiFillCloud, AiOutlineSearch } from "react-icons/ai";
+
+export const navdatas = [
   {
     id: 1,
     icon: <RxDashboard />,
@@ -13,37 +15,35 @@ export const datas = [
   },
   {
     id: 2,
-    icon: <MdInsights />,
-    text: "Sales Insights",
+    icon: <FiSettings />,
+    text: "Registro",
   },
   {
     id: 3,
-    icon: <RiCouponLine />,
-    text: "Coupons",
+    icon: <AiOutlineSearch />,
+    text: "Pesquisar",
   },
   {
     id: 4,
-    icon: <FiUser />,
-    text: "Team Member",
+    icon: <AiFillCloud />,
+    text: "Deploy",
   },
   {
     id: 5,
-    icon: <AiOutlineMessage />,
-    text: "Messages",
+    icon: <TbWorld />,
+    text: "Battousai",
   },
   {
     id: 6,
-    icon: <BsFolder />,
-    text: "File Manager",
-  },
-  {
-    id: 7,
-    icon: <BsWallet2 />,
-    text: "Wallet",
-  },
-  {
-    id: 8,
     icon: <FiLogOut />,
     text: "Logout",
   },
 ];
+
+export const userdata = [
+  {
+    name: "Abee Zarar",
+    email: "abee2002@gmail.com",
+    profile: user,
+  }
+]
