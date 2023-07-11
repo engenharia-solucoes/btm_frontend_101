@@ -1,25 +1,12 @@
-import React from 'react';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import React from "react";
+import Sidebar from "./Sidebar";
 
-import { Hero } from './components/pages/Hero'
-import Sidebar from './components/layout/Sidebar'
-import { Footer } from './components/layout/Footer'
-import BackTopBtn from './components/content/BackTopBtn';
-
-function App() {
-
+const App = () => {
   return (
-    <div>
-      <Router>
-        <Sidebar />
-        <Routes>
-          <Route exact path="/" element={<Hero />} > </Route>
-        </Routes>
-        <Footer/>
-        <BackTopBtn />
-      </Router>
+    <div className="w-full h-screen bg-back object-cover flex items-center">
+      <Sidebar />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
