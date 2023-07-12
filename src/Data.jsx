@@ -42,8 +42,8 @@ export const navdatas = [
 
 export const userdata = [
   {
-    name: "Abee Zarar",
-    email: "abee2002@gmail.com",
     profile: user,
+    name: "Abee Zarar",
+    email: "abee2002@gmail.com"
   }
 ]

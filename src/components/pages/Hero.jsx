@@ -20,7 +20,7 @@ const Hero = () => {
               Então, que tal conhecer um pouco sobre mim e o meu trabalho...
             </p>
             <a href='/contact'>
-              <button className='btn btn-md md:btn-lg transition ease-in-out delay-150 bg-violet-900 hover:-translate-y-1 hover:scale-110 hover:bg-violet-800 duration-300'>
+              <button className='btn btn-md text-white md:btn-lg transition ease-in-out delay-150 bg-violet-900 hover:-translate-y-1 hover:scale-110 hover:bg-violet-800 duration-300'>
                 Work with me
               </button>
             </a>
