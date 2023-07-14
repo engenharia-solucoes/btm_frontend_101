@@ -7,39 +7,47 @@ import { TbWorld } from "react-icons/tb";
 import { FiLogOut, FiSettings} from "react-icons/fi";
 import { AiFillCloud, AiOutlineSearch } from "react-icons/ai";
 
+// navigation
 export const navdatas = [
   {
     id: 1,
+    href: '/',
     icon: <RxDashboard />,
-    text: "Dashboard",
+    name: "Dashboard",
   },
   {
     id: 2,
+    href: '/Registro',
     icon: <FiSettings />,
-    text: "Registro",
+    name: "Registro",
   },
   {
     id: 3,
+    href: '/Pesquisar',
     icon: <AiOutlineSearch />,
-    text: "Pesquisar",
+    name: "Pesquisar",
   },
   {
     id: 4,
+    href: '/Deploy',
     icon: <AiFillCloud />,
-    text: "Deploy",
+    name: "Deploy",
   },
   {
     id: 5,
+    href: '/Battousai',
     icon: <TbWorld />,
-    text: "Battousai",
+    name: "Battousai",
   },
   {
     id: 6,
+    href: '/Logout',
     icon: <FiLogOut />,
-    text: "Logout",
+    name: "Logout",
   },
 ];
 
+//profile
 export const userdata = [
   {
     profile: user,

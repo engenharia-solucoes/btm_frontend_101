@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Register = () => {
+const Registro = () => {
 
   return (
     <section
-      id='home'
+      id='registro'
       className='lg:h-[85vh] flex items-center bg-primary lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden'
     >
       <div className='container mx-auto h-full'>
@@ -23,4 +23,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Registro;

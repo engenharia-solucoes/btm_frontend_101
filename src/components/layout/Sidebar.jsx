@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import { BiChevronLeft } from "react-icons/bi";
 
-import Hero from '../pages/Hero'
+import Login from '../pages/Login';
+import Dashboard from '../pages/Dashboard'
 import Registro from '../pages/Registro';
 
 import SidebarData from './SidebarData';
@@ -15,7 +16,10 @@ const Sidebar = () => {
 
   return (
     
-    <div className="flex h-screen w-screen bg-gray-200">
+    <section 
+      id='sidebar'
+      className="flex h-screen w-screen bg-gray-200"
+    >
 
       {/* Barra lateral */}
       <div className={` ${toggle ? "w-[5.8rem]" : ""} sidebar-container`}>
@@ -39,14 +43,15 @@ const Sidebar = () => {
       </div>
 
       {/* Conteúdo principal */}
-      <div className="flex-grow p-8">
+      <div className="flex-grow p-8"> 
        <Routes>
-          <Route exact path="/" element={<Hero />} > </Route>
-          <Route exact path="/registro" element={<Registro />} > </Route>
+          <Route exact path="/Dashboard" element={<Dashboard />} > </Route>
+          <Route path="/Login" element={<Login />} > </Route>
+          <Route path="/Registro" element={<Registro />} > </Route>
         </Routes>
       </div> 
 
-    </div>
+    </section>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import { navdatas } from '../../Data';
 
 const SidebarData = ({toggle}) =>  {
@@ -10,21 +11,21 @@ const SidebarData = ({toggle}) =>  {
 
     <nav className="flex-grow">
       <ul className="space-y-2">
-        {navdatas.map((data, i) => (
+        {navdatas.map((routes, i) => (
           <li 
-            key={data.id} 
+            key={routes.id} 
             className={`${
               toggle ? "last:w-[3.6rem]" : "last:w-[15rem]"
             } sidebar mt-5 last:absolute bottom-4`}
           >
-            <Link to={data.id === 1 ? '/' : `/${data.text.toLowerCase()}`}>
+            <Link to={`/Dashboard/${routes.name}`}>
               <div className="justify-content flex">
                 <div
                   className="mr-5 text-[1.7rem]"
                   onMouseEnter={() => setHoveredIndex(i)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
-                  {data.icon}
+                  {routes.icon}
                 </div>
                 <div
                   style={{
@@ -32,7 +33,7 @@ const SidebarData = ({toggle}) =>  {
                   }}
                   className={`whitespace-pre ${toggle ? 'hidden translate-x-28' : 'duration-500'}`}
                 >
-                  {data.text}
+                  {routes.name}
                 </div>
               </div>
             </Link>
@@ -45,7 +46,7 @@ const SidebarData = ({toggle}) =>  {
                 toggle && hoveredIndex === i ? 'last:ml-[3.2rem] absolute opacity-500 bg-indigo-300 text-white text-sm left-full rounded-md drop-shadow-lg mt-1 px-2 py-1 ml-6 group-hover:duration-300 -translate-x-3 transition-all' : 'absolute hidden bg-indigo-300 text-white text-sm left-full rounded-md drop-shadow-lg mt-1 px-2 py-1 ml-6 duration-500 translate-x-28'
               }`}
             >
-              {data.text}
+              {routes.name}
             </div>
           </li>
         ))}
