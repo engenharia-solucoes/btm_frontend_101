@@ -28,6 +28,9 @@ module.exports = {
         'spin-delay2': 'spin 6s linear infinite -4.5s',
         'spin-delay3': 'spin 6s linear infinite -7.5s',
       },    
+      boxShadow: {
+        'selected-route': '0 0 0 3px rgba(66, 153, 225, 0.5)'
+      },
       colors: {
         primary: '',
         secondary: '',
@@ -75,7 +78,7 @@ module.exports = {
           '800': '#6d1aaf',
           '900': '#59178c',
           '950': '#3c0269',
-        },      
+        },           
       },
     },
   },

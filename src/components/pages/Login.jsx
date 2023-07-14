@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { authenticate } from '../content/Auth';
+
 const Login = () => {
 
   const navigate = useNavigate();
@@ -9,35 +11,24 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const authenticate = (email, password) => {
-    // Simulação de autenticação
-    const authenticatedEmail = 'test@gmail.com';
-    const authenticatedPassword = 'senha';
-
-    if (email === authenticatedEmail && password === authenticatedPassword) {
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      await authenticate(email, password);
       // Lógica de autenticação bem-sucedida
-      console.log('Login bem-sucedido!');
       setError('');
       navigate('/Dashboard/Dashboard'); // Redirecionar para a página do sidebar
-    } else {
+    } catch (error) {
       // Lógica de autenticação falhou
-      setError('Email ou senha inválidos');
-
+      setError(error);
+  
       // Limpar o erro após 3 segundos (3000 milissegundos)
       setTimeout(() => {
         setError('');
       }, 3000);
     }
   };
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-    authenticate(email, password);
-    // Limpar campos de email e senha após o login
-    setEmail('');
-    setPassword('');
-  };
-
+  
   return (
     <section 
       id='login'
