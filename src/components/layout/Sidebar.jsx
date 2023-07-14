@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { BiChevronLeft } from "react-icons/bi";
 
 import Login from '../pages/Login';
+import Hero from '../pages/Hero'
 import Dashboard from '../pages/Dashboard'
 import Registro from '../pages/Registro';
 
@@ -48,6 +49,7 @@ const Sidebar = () => {
           <Route exact path="/Dashboard" element={<Dashboard />} > </Route>
           <Route path="/Login" element={<Login />} > </Route>
           <Route path="/Registro" element={<Registro />} > </Route>
+          <Route path="/Hero" element={<Hero />} > </Route>
         </Routes>
       </div> 
 
