@@ -11,6 +11,8 @@ import Registro from '../pages/Registro';
 import SidebarData from './SidebarData';
 import UserProfile from "./UserProfile";
 
+import { motion } from 'framer-motion'
+
 const Sidebar = () => {
 
   const [toggle, setToggle] = useState(false)
@@ -45,12 +47,18 @@ const Sidebar = () => {
 
       {/* Conteúdo principal */}
       <div className="flex-grow p-8"> 
-       <Routes>
-          <Route exact path="/Dashboard" element={<Dashboard />} > </Route>
-          <Route path="/Login" element={<Login />} > </Route>
-          <Route path="/Registro" element={<Registro />} > </Route>
-          <Route path="/Home" element={<Home />} > </Route>
-        </Routes>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+          <Routes>
+            <Route exact path="/Dashboard" element={<Dashboard />} > </Route>
+            <Route path="/Login" element={<Login />} > </Route>
+            <Route path="/Registro" element={<Registro />} > </Route>
+            <Route path="/Home" element={<Home />} > </Route>
+          </Routes>
+        </motion.div>
       </div> 
 
     </section>
