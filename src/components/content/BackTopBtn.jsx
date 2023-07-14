@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 // import link
 import {animateScroll as scroll } from 'react-scroll';
 // import icon
-import { ChevronUpIcon } from '@heroicons/react/outline';
+import { MdKeyboardArrowUp } from 'react-icons/md';
 
 const BackTopBtn = () => {
   const [show, setShow] = useState(false);
@@ -20,9 +20,9 @@ const BackTopBtn = () => {
       show && (
         <button
           onClick={() => scrollToTop()}
-          className='bg-violet-900 hover:bg-violet-800 text-white w-12 h-12 rounded-full fixed right-24 bottom-24 cursor-pointer flex justify-center items-center animate-bounce'
+          className='bg-bondi-blue-600  hover:bg-bondi-blue-700 text-white w-14 h-14 rounded-full fixed right-24 bottom-24 cursor-pointer flex justify-center items-center animate-bounce'
         >
-          <ChevronUpIcon className='w-6 h-6' />
+          <MdKeyboardArrowUp className='w-6 h-6' />
         </button>
       )
     );

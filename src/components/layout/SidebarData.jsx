@@ -34,13 +34,19 @@ const SidebarData = ({ toggle }) => {
                 onClick={() => handleItemClick(i)}
               >
                 <div className="justify-content flex">
-                  <div className="mr-5 text-[1.7rem]">{routes.icon}</div>
+                  <div 
+                    className="mr-5 text-[1.7rem]"
+                    onMouseEnter={() => setHoveredIndex(i)}
+                    onMouseLeave={() => setHoveredIndex(null)} 
+                  >
+                    {routes.icon}
+                  </div>
                   <div
                     style={{
                       transitionDelay: `${toggle ? '0ms' : `${i + 3}00ms`}`,
                     }}
                     className={`whitespace-pre ${
-                      toggle ? 'hidden translate-x-28' : 'duration-500'
+                      toggle ? 'invisible translate-x-28' : 'duration-500'
                     }`}
                   >
                     {routes.name}

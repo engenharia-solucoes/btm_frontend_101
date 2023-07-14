@@ -1,5 +1,6 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  mode: "jit",
   dark:"class",
   theme: {
     fontFamily: {
@@ -13,10 +14,12 @@ module.exports = {
       },
     },
     screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
+      xs: "480px",
+      ss: "620px",
+      sm: "768px",
+      md: "1060px",
+      lg: "1200px",
+      xl: "1700px",
     },
     extend: {
       backgroundImage: {
@@ -31,9 +34,14 @@ module.exports = {
       boxShadow: {
         'selected-route': '0 0 0 3px rgba(66, 153, 225, 0.5)'
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
       colors: {
-        primary: '',
-        secondary: '',
+        primary: "#00040f",
+        secondary: "#00f6ff",
+        dimWhite: "rgba(255, 255, 255, 0.7)",
+        dimBlue: "rgba(9, 151, 124, 0.1)",
         tertiary: '',
         accent: {
           DEFAULT: '',
