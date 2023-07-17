@@ -45,6 +45,13 @@ const textVariants = {
 };
 
 const Home = () => (
+
+    <motion.div
+      variants={fadeInVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
     <div className="bg-primary">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
@@ -60,18 +67,8 @@ const Home = () => (
       
       <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-      
-        <Stats />
-
-        <motion.div
-          variants={scaleVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-        >
+          <Stats />
           <Billing />
-        </motion.div>
-        
           <Business />
           <CardDeal />
           <Testimonials />
@@ -81,6 +78,7 @@ const Home = () => (
         </div>
       </div>
     </div>
+  </motion.div>
 );
 
 export default Home;

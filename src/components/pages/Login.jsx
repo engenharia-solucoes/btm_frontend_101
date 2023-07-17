@@ -6,6 +6,47 @@ import { authenticate } from '../content/Auth';
 
 import {motion} from 'framer-motion'
 
+const fadeInVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
+
+const flipVariants = {
+  initial: { rotateY: 180 },
+  animate: { rotateY: 0 },
+  exit: { rotateY: 180 },
+};
+
+const slideVariants = {
+  initial: { x: '-100%' },
+  animate: { x: '0%' },
+  exit: { x: '100%' },
+};
+
+const scaleVariants = {
+  initial: { scale: 0 },
+  animate: { scale: 1 },
+  exit: { scale: 0 },
+};
+
+const bounceVariants = {
+  initial: { scale: 0, opacity: 0 },
+  animate: { scale: 1, opacity: 1, transition: { duration: 0.5, ease: 'bounce' } },
+  exit: { scale: 0, opacity: 0 },
+};
+
+const textVariants = {
+  hidden: { width: 0 },
+  visible: {
+    width: '100%',
+    transition: {
+      duration: 1,
+      ease: 'easeInOut',
+    },
+  },
+};
+
 const Login = () => {
 
   const navigate = useNavigate();
@@ -34,10 +75,11 @@ const Login = () => {
   
   return (
 
-    <motion.div 
-      initial={{width:0}}
-      animate={{width:'100%'}}
-      exit={{x:window.innerWidth,transition:{duration:0.5}}}
+    <motion.div
+      variants={fadeInVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
     >
       <section 
         id='login'
@@ -58,6 +100,13 @@ const Login = () => {
           </div>
         </Link>
     
+        <motion.div
+              variants={scaleVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+            >
+
         <div className='relative w-[500px] h-[540px] bg-firefly-950 rounded-lg overflow-hidden'>
           {/* Linhas Dinâmicas */}
           <div className="absolute w-[380px] h-[420px] bg-gradient-to-r from-heliotrope-500 via-heliotrope-500 to-transparent-r -top-[50%] -left-[50%]  animate-spin-delay2 origin-bottom-right"></div>
@@ -68,6 +117,7 @@ const Login = () => {
     
           <div className="absolute w-[380px] h-[420px] bg-gradient-to-r from-heliotrope-500 via-heliotrope-500 to-transparent-r -top-[50%] -left-[50%] animate-spin-delay3 origin-bottom-right"></div> 
     
+         
           <div className="absolute inset-1 bg-firefly-950 rounded-lg z-10 p-5 ">
             <form className='m-5' onSubmit={handleLogin}>
               <h2 className='text-4xl text-white font-medium text-center'>Bem-vindo ao Battoumanager</h2>
@@ -110,10 +160,12 @@ const Login = () => {
                 </button>
               </div>
             </form>
+          
 
           </div>
           
         </div>
+        </motion.div>
       </section>
     </motion.div>
   );
