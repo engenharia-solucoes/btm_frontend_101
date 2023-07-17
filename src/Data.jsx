@@ -44,12 +44,6 @@ export const navdatas = [
   },
   {
     id: 6,
-    href: '/Hero',
-    icon: <FiLogOut />,
-    name: "Hero",
-  },
-  {
-    id: 7,
     href: '/Logout',
     icon: <FiLogOut />,
     name: "Logout",
