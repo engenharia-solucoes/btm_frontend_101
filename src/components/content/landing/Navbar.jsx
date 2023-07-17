@@ -3,6 +3,8 @@ import { useState } from "react";
 import { close, logo, menu } from "../../../assets";
 import { navLinks } from "../../../Data";
 
+// Landing Page
+
 const Navbar = () => {
   
   const [active, setActive] = useState("Home");

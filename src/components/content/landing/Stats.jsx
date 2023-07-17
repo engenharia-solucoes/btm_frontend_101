@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import styles from "../../../style";
+import styles from "../style";
 import { stats } from "../../../Data";
 import { motion } from 'framer-motion';
 

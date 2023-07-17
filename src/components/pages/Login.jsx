@@ -1,75 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import { AiFillHome } from "react-icons/ai";
 import { authenticate } from '../content/Auth';
 
+// Animations 
 import {motion} from 'framer-motion'
+import { fadeInVariants, scaleVariants } from '../content/animationVariants';
 
-const fadeInVariants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
-};
-
-const flipVariants = {
-  initial: { rotateY: 180 },
-  animate: { rotateY: 0 },
-  exit: { rotateY: 180 },
-};
-
-const slideVariants = {
-  initial: { x: '-100%' },
-  animate: { x: '0%' },
-  exit: { x: '100%' },
-};
-
-const scaleVariants = {
-  initial: { scale: 0 },
-  animate: { scale: 1 },
-  exit: { scale: 0 },
-};
-
-const bounceVariants = {
-  initial: { scale: 0, opacity: 0 },
-  animate: { scale: 1, opacity: 1, transition: { duration: 0.5, ease: 'bounce' } },
-  exit: { scale: 0, opacity: 0 },
-};
-
-const textVariants = {
-  hidden: { width: 0 },
-  visible: {
-    width: '100%',
-    transition: {
-      duration: 1,
-      ease: 'easeInOut',
-    },
-  },
-};
+// Message
+import Message from '../content/Message';
+import { MessageContext } from '../redux/MessageContext';
 
 const Login = () => {
 
   const navigate = useNavigate();
+  const { message, setMessage } = useContext(MessageContext);
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       await authenticate(email, password);
-      // Lógica de autenticação bem-sucedida
-      setError('');
-      navigate('/Dashboard'); // Redirecionar para a página do sidebar
+      setMessage({ type: 'success', text: 'Autenticação bem-sucedida!' });
+      navigate('/Dashboard');
     } catch (error) {
-      // Lógica de autenticação falhou
-      setError(error);
-  
-      // Limpar o erro após 3 segundos (3000 milissegundos)
+      setMessage({ type: 'error', text: 'Falha na autenticação!' });
+
       setTimeout(() => {
-        setError('');
-      }, 3000);
+        setMessage({ type: '', text: '' });
+      }, 1200);
     }
   };
   
@@ -85,12 +47,8 @@ const Login = () => {
         id='login'
         className='flex flex-col justify-center items-center w-screen h-screen bg-login-bg bg-cover bg-center'
       >
-        {error && 
-          <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-10" role="alert">
-            <strong class="font-bold">Erro!</strong>
-            <span class="block sm:inline">{error}</span>
-          </div> 
-        }
+
+        <Message type={message.type} msg={message.text} />
 
         <Link to="/Home" className="absolute top-8 left-10 m-8">
           <div className="min-w-[2rem] h-[2rem]">
