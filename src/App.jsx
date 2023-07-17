@@ -10,7 +10,7 @@ import { AnimatePresence  } from 'framer-motion'
 
 function App() {
   return (
-      <div className="w-screen overflow-hidden">
+      <div className="w-screen overflow-hidden bg-primary">
         <AnimatePresence>
           <Router>
             <Routes>
