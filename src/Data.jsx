@@ -72,15 +72,15 @@ export const navLinks = [
   },
   {
     id: "features",
-    title: "Features",
+    title: "Recursos",
   },
   {
     id: "product",
-    title: "Product",
+    title: "Produto",
   },
   {
     id: "clients",
-    title: "Clients",
+    title: "Nossos Clientes",
   },
 ];
 
@@ -112,50 +112,42 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
-    name: "Herman Jensen",
-    title: "Founder & Leader",
+      "Manter a segurança da informação 24x7 é o novo desafio da área hospitalar. Com a gestão de segurança que a Bidweb nos proporciona, ficamos tranquilos quanto à privacidade e a proteção dos nosso dados.",
+    name: "Márcio Moraes",
+    title: "IMIP",
     img: people01,
   },
   {
     id: "feedback-2",
     content:
-      "Money makes your life easier. If you're lucky to have it, you're lucky.",
-    name: "Steve Mark",
-    title: "Founder & Leader",
+      "Nosso negócio não para, trabalhamos 24x7. Por isso estamos acompanhados de empresas que nos dão respostas rápidas e precisas a incidentes, como a Bidweb na área de segurança da informação.",
+    name: "André Vilas Boas",
+    title: "Grupo Dislub Equador",
     img: people02,
-  },
-  {
-    id: "feedback-3",
-    content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
-    name: "Kenn Gallagher",
-    title: "Founder & Leader",
-    img: people03,
   },
 ];
 
 export const stats = [
   {
     id: "stats-1",
-    title: "User Active",
+    title: "Usuários Ativos",
     value: "3800+",
   },
   {
     id: "stats-2",
-    title: "Trusted by Company",
+    title: "Empresas parceiras",
     value: "230+",
   },
   {
     id: "stats-3",
-    title: "Transaction",
-    value: "$230M+",
+    title: "Logs tratados",
+    value: "230M+",
   },
 ];
 
 export const footerLinks = [
   {
-    title: "Useful Links",
+    title: "Links seguros",
     links: [
       {
         name: "Content",
@@ -205,15 +197,15 @@ export const footerLinks = [
     ],
   },
   {
-    title: "Partner",
+    title: "Parceiros",
     links: [
       {
-        name: "Our Partner",
-        link: "https://www.hoobank.com/our-partner/",
+        name: "Nossos parceiros",
+        link: "#",
       },
       {
-        name: "Become a Partner",
-        link: "https://www.hoobank.com/become-a-partner/",
+        name: "Entrar em contato",
+        link: "#",
       },
     ],
   },
@@ -223,12 +215,12 @@ export const socialMedia = [
   {
     id: "social-media-1",
     icon: instagram,
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/bidwebsit/",
   },
   {
     id: "social-media-2",
     icon: facebook,
-    link: "https://www.facebook.com/",
+    link: "https://www.facebook.com/bidwebsit",
   },
   {
     id: "social-media-3",
@@ -238,7 +230,7 @@ export const socialMedia = [
   {
     id: "social-media-4",
     icon: linkedin,
-    link: "https://www.linkedin.com/",
+    link: "https://www.linkedin.com/company/bidweb-security-it",
   },
 ];
 
