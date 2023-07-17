@@ -17,7 +17,7 @@ const SidebarData = ({ toggle }) => {
       <ul className="space-y-2">
         {navdatas.map((routes, i) => {
 
-          const routePath = `/Dashboard/${routes.name}`;
+          const routePath = `/${routes.name}`;
 
           return (
             <li

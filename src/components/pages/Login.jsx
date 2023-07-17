@@ -20,7 +20,7 @@ const Login = () => {
       await authenticate(email, password);
       // Lógica de autenticação bem-sucedida
       setError('');
-      navigate('/Dashboard/Dashboard'); // Redirecionar para a página do sidebar
+      navigate('/Dashboard'); // Redirecionar para a página do sidebar
     } catch (error) {
       // Lógica de autenticação falhou
       setError(error);
@@ -50,7 +50,7 @@ const Login = () => {
           </div> 
         }
 
-        <Link to="/" className="absolute top-8 left-10 m-8">
+        <Link to="/Home" className="absolute top-8 left-10 m-8">
           <div className="min-w-[2rem] h-[2rem]">
               <AiFillHome
                 className="w-full h-full rounded-full object-cover text-white hover:text-bondi-blue-500"

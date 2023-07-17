@@ -52,6 +52,7 @@ const Sidebar = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
+
           <Routes>
             <Route exact path="/Dashboard" element={<Dashboard />} > </Route>
             <Route path="/Login" element={<Login />} > </Route>

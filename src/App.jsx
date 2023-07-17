@@ -14,10 +14,10 @@ function App() {
         <AnimatePresence>
           <Router>
             <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route path="/Dashboard/Login" element={<Login />} />
-              <Route path="/Dashboard/Logout" element={<Login />} />
-              <Route path="/Dashboard/*" element={<Sidebar />} />
+              <Route exact path="/Home" element={<Home />} />
+              <Route path="/Login" element={<Login />} />
+              <Route path="/Logout" element={<Login />} />
+              <Route path="/*" element={<Sidebar />} />
             </Routes>
             <BackTopBtn />
           </Router>
