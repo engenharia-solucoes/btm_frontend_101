@@ -1,14 +1,17 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 
+import DarkModeButton from "../content/DarkModeButton"
+
 import { navdatas } from '../../Data';
 import { ThemeContext } from "../redux/ThemeContext";
 
 const SidebarData = ({ toggle }) => {
 
+  const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
+
   const [hoveredIndex, setHoveredIndex] = useState(null)
   const [activeIndex, setActiveIndex] = useState(null);
-  const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
 
   const handleItemClick = (index) => {
     setActiveIndex(index);
@@ -79,6 +82,18 @@ const SidebarData = ({ toggle }) => {
             </li>
           );
         })}
+
+        <li 
+          className={`${
+            toggle ? 'last:w-[3.6rem]' : 'last:w-[18rem]'
+          } sidebar mt-5 last:absolute bottom-4`}
+        >
+          <DarkModeButton toggle={toggle}/>
+        </li>
+
+        
+
+
       </ul>
     </nav>
   );

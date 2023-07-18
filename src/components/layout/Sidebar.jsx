@@ -34,7 +34,7 @@ const Sidebar = () => {
     <section 
       id='sidebar'
       className={`flex h-screen w-screen ${
-        isDarkMode ? 'dark bg-gray-100' : 'bg-tertiary'
+        isDarkMode ? 'dark bg-gray-200' : 'bg-tertiary'
       }`}
     >
 
@@ -46,8 +46,6 @@ const Sidebar = () => {
 
         {/* Links da barra lateral */}
         <SidebarData toggle={toggle}/>
-
-        <DarkModeButton />
 
         {/* Icon da barra lateral */}
         <div className="absolute top-[7rem] flex justify-center items-center -left-5 w-10 h-10 bg-gray-100 rounded-full cursor-pointer" onClick={()=> {
