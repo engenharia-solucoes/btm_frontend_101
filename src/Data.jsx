@@ -189,11 +189,11 @@ export const footerLinks = [
     links: [
       {
         name: "Entrar em contato",
-        link: "#",
+        link: "mailto:contato@bidweb.com.br",
       },
       {
         name: "Trabalhe conosco",
-        link: "#",
+        link: "https://bidweb.solides.jobs/",
       },
     ],
   },
