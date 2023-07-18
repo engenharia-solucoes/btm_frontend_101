@@ -7,10 +7,8 @@ import { navdatas } from '../../Data';
 import { ThemeContext } from "../redux/ThemeContext";
 
 const SidebarData = ({ toggle }) => {
-
   const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
-
-  const [hoveredIndex, setHoveredIndex] = useState(null)
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   const [activeIndex, setActiveIndex] = useState(null);
 
   const handleItemClick = (index) => {
@@ -29,13 +27,14 @@ const SidebarData = ({ toggle }) => {
     <nav className="flex-grow">
       <ul className="space-y-2">
         {navdatas.map((routes, i) => {
-
           const routePath = `/${routes.name}`;
 
           return (
             <li
               key={routes.id}
               className={`${
+                isDarkMode ? 'text-bondi-blue-600 font-semibold' : 'dark text-bondi-blue-500 font-semibold'
+              } ${
                 toggle ? 'last:w-[3.6rem]' : 'last:w-[15rem]'
               } sidebar mt-5 last:absolute bottom-4`}
             >
@@ -73,8 +72,8 @@ const SidebarData = ({ toggle }) => {
                 }}
                 className={`whitespace-pre ${
                   toggle && hoveredIndex === i
-                    ? 'last:ml-[3.2rem] absolute opacity-500 bg-bondi-blue-500 text-white text-sm left-full rounded-md drop-shadow-lg mt-1 px-2 py-1 ml-6 group-hover:duration-500 -translate-x-3 transition-all'
-                    : 'absolute hidden bg-bondi-blue-300 text-white text-sm left-full rounded-md drop-shadow-lg mt-1 px-2 py-1 ml-6 duration-500 translate-x-28'
+                    ? `last:ml-[3.2rem] absolute opacity-500 ${ isDarkMode ? 'bg-bondi-blue-600 font-semibold' : 'dark bg-bondi-blue-500 font-semibold'} text-white text-sm left-full rounded-md drop-shadow-lg mt-1 px-3 py-2 ml-6 group-hover:duration-500 -translate-x-3 transition-all`
+                    : `absolute hidden ${ isDarkMode ? 'bg-bondi-blue-300 font-semibold' : 'dark bg-bondi-blue-300 font-semibold'} text-white text-sm left-full rounded-md drop-shadow-lg mt-1 px-3 py-2 ml-6 duration-500 translate-x-28`
                 }`}
               >
                 {routes.name}
@@ -82,18 +81,16 @@ const SidebarData = ({ toggle }) => {
             </li>
           );
         })}
+      </ul>
 
+      <ul>
         <li 
           className={`${
-            toggle ? 'last:w-[3.6rem]' : 'last:w-[18rem]'
-          } sidebar mt-5 last:absolute bottom-4`}
-        >
+              toggle ? 'last:w-[3.6rem]' : 'last:w-[18rem]'
+            } sidebar mb-4 last:absolute bottom-14`}
+          >
           <DarkModeButton toggle={toggle}/>
         </li>
-
-        
-
-
       </ul>
     </nav>
   );

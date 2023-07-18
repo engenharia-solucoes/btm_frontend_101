@@ -11,8 +11,6 @@ import Registro from '../pages/Registro';
 import SidebarData from './SidebarData';
 import UserProfile from "./UserProfile";
 
-import DarkModeButton from "../content/DarkModeButton"
-
 import { motion } from 'framer-motion'
 import { ThemeContext } from "../redux/ThemeContext";
 

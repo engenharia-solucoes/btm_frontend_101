@@ -31,15 +31,6 @@
   scroll-behavior: smooth;
 }
 
-a {
-  font-weight: 500;
-  color: #00dcea; /* 646cff -*/
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #00dcea; /* 747bff  */
-}
 
 body {
   margin: 0;
@@ -93,7 +84,6 @@ button:focus-visible {
     @apply flex items-center mt-2 p-4 rounded-lg cursor-pointer hover:bg-white transition-all duration-300
   }
 }
-
 
 .text-gradient {
   background: radial-gradient(
