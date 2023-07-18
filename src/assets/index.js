@@ -1,9 +1,5 @@
-import airbnb from "./airbnb.png";
 import bill from "./bill.png";
-import binance from "./binance.png";
 import card from "./card.png";
-import coinbase from "./coinbase.png";
-import dropbox from "./dropbox.png";
 import logo from "./logo.svg";
 import quotes from "./quotes.svg";
 import robot from "./robot.svg";
@@ -22,14 +18,18 @@ import linkedin from "./linkedin.svg";
 import twitter from "./twitter.svg";
 import people01 from "./people01.png";
 import people02 from "./people02.png";
+import gatinfosec from "./gatinfosec.svg";
+import sentinelone from "./sentinelone.svg";
+import trendmicro from "./trendmicro.svg";
+
+
 
 export {
-  airbnb,
+  gatinfosec,
+  sentinelone,
+  trendmicro,
   bill,
-  binance,
   card,
-  coinbase,
-  dropbox,
   logo,
   quotes,
   robot,

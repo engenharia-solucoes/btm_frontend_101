@@ -2,7 +2,7 @@
 import user from "./assets/user.jpg";
 
 // Photos
-import { people01, people02, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "./assets";
+import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "./assets";
 
 // Icons
 import { RxDashboard } from "react-icons/rx";
@@ -147,65 +147,53 @@ export const stats = [
 
 export const footerLinks = [
   {
-    title: "Links seguros",
+    title: "Empresa",
     links: [
       {
-        name: "Content",
-        link: "https://www.hoobank.com/content/",
+        name: "Política de Privacidade",
+        link: "https://privacy-central.securiti.ai/#/notices/a4d739b4-cdd3-443d-98e6-950a6f99ae20",
       },
       {
-        name: "How it Works",
-        link: "https://www.hoobank.com/how-it-works/",
+        name: "Código de Ética e conduta",
+        link: "https://www.bidweb.com.br/pt/codigo-de-etica-e-conduta",
       },
       {
-        name: "Create",
-        link: "https://www.hoobank.com/create/",
+        name: "Canal de Denúncia",
+        link: "https://denuncias.umaempresaetica.com.br/",
       },
       {
-        name: "Explore",
-        link: "https://www.hoobank.com/explore/",
-      },
-      {
-        name: "Terms & Services",
-        link: "https://www.hoobank.com/terms-and-services/",
+        name: "Portal da Privacidade",
+        link: "https://privacy-central.securiti.ai/#/dsr/efbb2fe0-0a33-49b6-84ae-eac49a96facd",
       },
     ],
   },
   {
-    title: "Community",
+    title: "Links Úteis",
     links: [
       {
-        name: "Help Center",
-        link: "https://www.hoobank.com/help-center/",
-      },
-      {
-        name: "Partners",
-        link: "https://www.hoobank.com/partners/",
-      },
-      {
-        name: "Suggestions",
-        link: "https://www.hoobank.com/suggestions/",
-      },
-      {
-        name: "Blog",
-        link: "https://www.hoobank.com/blog/",
-      },
-      {
-        name: "Newsletters",
-        link: "https://www.hoobank.com/newsletters/",
-      },
-    ],
-  },
-  {
-    title: "Parceiros",
-    links: [
-      {
-        name: "Nossos parceiros",
+        name: "Suporte",
         link: "#",
       },
+      {
+        name: "API",
+        link: "#",
+      },
+      {
+        name: "Documentação",
+        link: "#",
+      },
+    ],
+  },
+  {
+    title: "Contato",
+    links: [
       {
         name: "Entrar em contato",
-        link: "#",
+        link: "mailto:contato@bidweb.com.br",
+      },
+      {
+        name: "Trabalhe conosco",
+        link: "https://bidweb.solides.jobs/",
       },
     ],
   },
@@ -237,18 +225,14 @@ export const socialMedia = [
 export const clients = [
   {
     id: "client-1",
-    logo: airbnb,
+    logo: trendmicro,
   },
   {
     id: "client-2",
-    logo: binance,
+    logo: gatinfosec,
   },
   {
     id: "client-3",
-    logo: coinbase,
-  },
-  {
-    id: "client-4",
-    logo: dropbox,
+    logo: sentinelone,
   },
 ];

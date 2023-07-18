@@ -7,7 +7,7 @@ const Button = ({ styles }) => {
 
   const handleWorkWithMe = (e) => {
     e.preventDefault();
-    navigate("/Dashboard/Login");
+    navigate("/Login");
   };
 
   return (
