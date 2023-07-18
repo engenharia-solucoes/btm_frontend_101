@@ -2,7 +2,7 @@
 import user from "./assets/user.jpg";
 
 // Photos
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "./assets";
+import { people01, people02, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "./assets";
 
 // Icons
 import { RxDashboard } from "react-icons/rx";

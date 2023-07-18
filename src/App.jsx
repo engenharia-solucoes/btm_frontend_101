@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Login from './components/pages/Login';
@@ -7,10 +7,19 @@ import Sidebar from './components/layout/Sidebar';
 import BackTopBtn from './components/content/BackTopBtn';
 
 import { AnimatePresence  } from 'framer-motion'
-import { MessageProvider  } from './components/redux/MessageContext';
+import { MessageProvider } from './components/redux/MessageContext';
+import { ThemeProvider  } from './components/redux/ThemeContext';
 
 function App() {
+
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode((prevMode) => !prevMode);
+  };
+
   return (
+    <ThemeProvider>
       <div className="w-screen overflow-hidden bg-primary">
         <AnimatePresence>
           <MessageProvider>
@@ -26,6 +35,7 @@ function App() {
           </MessageProvider>
         </AnimatePresence>
       </div>
+    </ThemeProvider>
   );
 }
 
