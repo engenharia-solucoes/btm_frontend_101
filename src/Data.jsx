@@ -82,23 +82,23 @@ export const features = [
   {
     id: "feature-1",
     icon: star,
-    title: "Rewards",
+    title: "Economia",
     content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
+      "Garanta transações confiáveis e o correto tratamento dos seus dados, evitando perdas financeiras.",
   },
   {
     id: "feature-2",
     icon: shield,
-    title: "100% Secured",
+    title: "Segurança",
     content:
-      "We take proactive steps make sure your information and transactions are secure.",
+      "Tomamos medidas protetivas para garantir que suas informações estejam seguras.",
   },
   {
     id: "feature-3",
     icon: send,
-    title: "Balance Transfer",
+    title: "Prevenção",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+      "Invista em ações preventivas para evitar ataques e analisar os logs gerados pelas suas ferramentas. ",
   },
 ];
 

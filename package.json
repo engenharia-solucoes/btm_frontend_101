@@ -19,7 +19,8 @@
     "react-scroll": "^1.8.9",
     "react-switch": "^7.0.0",
     "redux": "^4.2.1",
-    "swiper": "^10.0.4"
+    "swiper": "^10.0.4",
+    "switch": "^0.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",
