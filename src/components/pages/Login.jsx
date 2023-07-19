@@ -2,7 +2,9 @@ import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import { AiFillHome } from "react-icons/ai";
-import { authenticate } from '../content/Auth';
+
+import { useDispatch } from 'react-redux';
+import { authenticate, loginSuccess } from '../redux/actions/authActions'; // Importe a função de autenticação
 
 // Animations 
 import {motion} from 'framer-motion'
@@ -15,8 +17,10 @@ import { MessageContext } from '../redux/MessageContext';
 const Login = () => {
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const { message, setMessage } = useContext(MessageContext);
+  console.log("message:", message.text);
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -25,6 +29,7 @@ const Login = () => {
     e.preventDefault();
     try {
       await authenticate(email, password);
+      dispatch(loginSuccess()); 
       setMessage({ type: 'success', text: 'Autenticação bem-sucedida!'});
       navigate('/Dashboard');
     } catch (error) {
@@ -34,7 +39,7 @@ const Login = () => {
         setMessage({ type: '', text: '' });
       }, 1200);
     }
-  };
+  }; 
   
   return (
 
@@ -115,7 +120,7 @@ const Login = () => {
                   type="submit" 
                   className='w-full my-5 py-2 bg-bondi-blue-500 shadow-lg shadow-bondi-blue-500/50 hover:shadow-bondi-blue-500/40 text-white font-semibold rounded-lg'
                 >
-                  SIGN IN
+                  Entrar
                 </button>
               </div>
             </form>

@@ -1,8 +1,18 @@
-import { useState } from 'react';
-
-export const authenticate = (email, password) => {
-
-    const [loginSuccess, setLoginSuccess] = useState(false); // Novo estado para indicar login com sucesso
+// actions.js
+export const loginSuccess = () => {
+    return {
+      type: 'LOGIN_SUCCESS'
+    };
+  };
+  
+  export const loginFailed = (error) => {
+    return {
+      type: 'LOGIN_FAILED',
+      payload: error
+    };
+  };
+  
+  export const authenticate = (email, password) => {
 
     // Simulação de autenticação
     const authenticatedEmail = 'test@gmail.com';
@@ -12,7 +22,6 @@ export const authenticate = (email, password) => {
       setTimeout(() => {
         if (email === authenticatedEmail && password === authenticatedPassword) {
           // Lógica de autenticação bem-sucedida
-          setLoginSuccess(true)
           resolve();
         } else {
           // Lógica de autenticação falhou

@@ -1,36 +1,41 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 
-import { MessageContext } from '../redux/MessageContext';
+import { MessageContext } from "../redux/MessageContext";
 import { ThemeContext } from "../redux/ThemeContext";
 
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+
+import Message from '../content/Message';
 import Button from "../content/Button";
 
 const Dashboard = () => {
-
-  const { message } = useContext(MessageContext);
-  const [showMessage, setShowMessage] = useState(false);
-
-  useEffect(() => {
-    if (message.text) {
-      setShowMessage(true);
-
-      const timer = setTimeout(() => {
-        setShowMessage(false);
-      }, 1200);
-
-      return () => clearTimeout(timer);
-    }
-  }, [message]);
-
+  
   const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
 
+  const { message } = useContext(MessageContext);
+
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  
+  // Estado para controlar a exibição da mensagem
+  const [showMessage, setShowMessage] = useState(false);
+  const [hasShownMessage, setHasShownMessage] = useState(false);
+
   useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
+    // Verifica se o usuário está autenticado e ainda não mostrou a mensagem
+    if (isAuthenticated && !hasShownMessage) {
+      setShowMessage(true);
+
+      // Define o timer para ocultar a mensagem após 1200 ms (1.2 segundos)
+      const timer = setTimeout(() => {
+        setShowMessage(false);
+        setHasShownMessage(true);
+      }, 1200);
+
+      // Limpa o timer quando o componente for desmontado
+      return () => clearTimeout(timer);
     }
-  }, [isDarkMode]);
+  }, [isAuthenticated, hasShownMessage]);
 
   return (
     <section
@@ -38,12 +43,11 @@ const Dashboard = () => {
       className='lg:h-[85vh] flex items-center lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden'
     >
       <div className='container mx-auto h-full'>
-
         {showMessage && (
           <div
             className={`${isDarkMode ? 'bg-teal-100 border-teal-400 text-teal-700' : 'bg-green-100 border-green-400 text-green-700'} border relative px-4 py-3 rounded mb-10`}
             role='alert'
-          >
+          > 
             {message.text}
           </div>
         )}
