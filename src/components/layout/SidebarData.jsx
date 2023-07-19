@@ -44,7 +44,7 @@ const SidebarData = ({ toggle }) => {
                 to={routePath}
                 className={`${
                   activeIndex === i ? 'text-white' : ''
-                }`}
+                } ${!isDarkMode ? 'hover:text-bondi-blue-600' : 'dark hover:text-bondi-blue-500 '}`}
                 onClick={() => handleItemClick(i)}
               > 
                 <div className="justify-content flex">

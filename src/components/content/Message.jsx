@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const Message = ({ type, msg }) => {
+
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -21,7 +22,7 @@ const Message = ({ type, msg }) => {
 
   const typeClasses = {
     error: 'bg-red-100 border border-red-400 text-red-700',
-    success: 'bg-green-100 border border-green-400 text-green-700',
+    success: `bg-green-100 border border-green-400 text-green-700`,
     alert: 'bg-yellow-100 border border-yellow-400 text-yellow-700',
   };
 

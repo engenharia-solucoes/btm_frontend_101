@@ -41,7 +41,7 @@ const Dashboard = () => {
 
         {showMessage && (
           <div
-            className='bg-green-100 border border-green-400 text-green-700 relative px-4 py-3 rounded mb-10'
+            className={`${isDarkMode ? 'bg-teal-100 border-teal-400 text-teal-700' : 'bg-green-100 border-green-400 text-green-700'} border relative px-4 py-3 rounded mb-10`}
             role='alert'
           >
             {message.text}

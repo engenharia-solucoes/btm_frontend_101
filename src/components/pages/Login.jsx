@@ -15,6 +15,7 @@ import { MessageContext } from '../redux/MessageContext';
 const Login = () => {
 
   const navigate = useNavigate();
+
   const { message, setMessage } = useContext(MessageContext);
 
   const [email, setEmail] = useState('');
@@ -24,10 +25,10 @@ const Login = () => {
     e.preventDefault();
     try {
       await authenticate(email, password);
-      setMessage({ type: 'success', text: 'Autenticação bem-sucedida!' });
+      setMessage({ type: 'success', text: 'Autenticação bem-sucedida!'});
       navigate('/Dashboard');
     } catch (error) {
-      setMessage({ type: 'error', text: 'Falha na autenticação!' });
+      setMessage({ type: 'error', text: 'Falha na autenticação!'});
 
       setTimeout(() => {
         setMessage({ type: '', text: '' });
@@ -59,11 +60,11 @@ const Login = () => {
         </Link>
     
         <motion.div
-              variants={scaleVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-            >
+          variants={scaleVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+        >
 
         <div className='relative w-[500px] h-[540px] bg-firefly-950 rounded-lg overflow-hidden'>
           {/* Linhas Dinâmicas */}
@@ -118,10 +119,7 @@ const Login = () => {
                 </button>
               </div>
             </form>
-          
-
           </div>
-          
         </div>
         </motion.div>
       </section>

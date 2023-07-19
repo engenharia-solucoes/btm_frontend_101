@@ -5,6 +5,7 @@ import { ThemeContext } from "../redux/ThemeContext";
 import { FaMoon, FaSun } from 'react-icons/fa';
 
 const DarkModeButton = ({ toggle }) => {
+  
   const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
   const [isHovered, setIsHovered] = useState(false);
 
