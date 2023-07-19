@@ -7,7 +7,7 @@ import { navdatas } from '../../Data';
 import { ThemeContext } from "../redux/ThemeContext";
 
 const SidebarData = ({ toggle }) => {
-  const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
+
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -15,6 +15,8 @@ const SidebarData = ({ toggle }) => {
     setActiveIndex(index);
   };
 
+  const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
+  
   useEffect(() => {
     if (isDarkMode) {
       document.body.classList.add('dark-mode');
@@ -35,8 +37,8 @@ const SidebarData = ({ toggle }) => {
               className={`${
                 isDarkMode ? 'text-bondi-blue-600 font-semibold' : 'dark text-bondi-blue-500 font-semibold'
               } ${
-                toggle ? 'last:w-[3.6rem]' : 'last:w-[15rem]'
-              } sidebar mt-5 last:absolute bottom-4`}
+                toggle ? 'last:w-[3.6rem]' : 'last:w-[18rem]'
+              } sidebar mt-5 last:absolute bottom-6`}
             >
               <Link
                 to={routePath}
@@ -87,7 +89,7 @@ const SidebarData = ({ toggle }) => {
         <li 
           className={`${
               toggle ? 'last:w-[3.6rem]' : 'last:w-[18rem]'
-            } sidebar mb-4 last:absolute bottom-14`}
+            } sidebar mb-6 last:absolute bottom-14`}
           >
           <DarkModeButton toggle={toggle}/>
         </li>

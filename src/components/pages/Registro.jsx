@@ -1,6 +1,17 @@
-import React from 'react';
+import React, {useEffect, useContext} from 'react';
+import { ThemeContext } from "../redux/ThemeContext";
 
 const Registro = () => {
+
+  const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [isDarkMode]);
 
   return (
     <section
@@ -10,10 +21,10 @@ const Registro = () => {
       <div className='container mx-auto h-full'>
         <div className='flex items-center h-full pt-8'>
           <div className='flex-1 flex flex-col items-center lg:items-start'>
-            <p className='text-lg text-violet-500 text-md mb-[22px]'>
+            <p className={`text-lg ${isDarkMode ? 'text-bondi-blue-700' : 'text-bondi-blue-500'} text-md mb-[22px]`}>
               Outra página
             </p>
-            <h1 className='text-4xl leading-[44px] md:text-5xl md:leading-tight lg:text-7xl lg:leading-[1.2] font-bold md:tracking-[-2px]'>
+            <h1 className={`font-bold ${isDarkMode ? '' : 'text-white'}`}>
               Registro
             </h1>
           </div>
