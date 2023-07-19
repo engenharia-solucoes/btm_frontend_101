@@ -84,7 +84,7 @@ export const features = [
     icon: star,
     title: "Economia",
     content:
-      "Garanta transações confiáveis e o correto tratamento dos seus dados, evitando perdas financeiras.",
+      "Garanta um ambiente confiável e o correto tratamento dos seus dados, evitando perdas financeiras.",
   },
   {
     id: "feature-2",
