@@ -1,6 +1,5 @@
 import styles from "../content/style";
 import { 
-  Billing, 
   Business, 
   CardDeal, 
   Clients, 
@@ -41,7 +40,6 @@ const Home = () => (
       <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Stats />
-          <Billing />
           <Business />
           <CardDeal />
           <Testimonials />
