@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Login from './components/pages/Login';
@@ -17,11 +17,11 @@ import rootReducer from './components/redux';
 function App() {
 
   const store = configureStore({ reducer: rootReducer });
-
+  
   return (
     <ThemeProvider>
       <Provider store={store}>
-        <div className="w-screen overflow-hidden bg-primary">
+        <div className={`w-screen overflow-x-hidden bg-tertiary`}>
           <AnimatePresence>
             <MessageProvider>
               <Router>

@@ -3,7 +3,7 @@ import { ThemeContext } from "../redux/ThemeContext";
 
 import Cards from '../content/Cards';
 
-const Registro = ({toggle}) => {
+const Pesquisar = ({toggle}) => {
 
   const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
 
@@ -16,7 +16,7 @@ const Registro = ({toggle}) => {
   }, [isDarkMode]);
 
   return (
-    <section id='registro' className={`${isDarkMode ? 'bg-gray-200' : 'text-white'}`}>
+    <section id='pesquisar'>
 
       <div className='container mx-auto pt-5'>
         <div className='flex flex-col items-center text-center'>
@@ -33,4 +33,4 @@ const Registro = ({toggle}) => {
   );
 };
 
-export default Registro;
+export default Pesquisar;

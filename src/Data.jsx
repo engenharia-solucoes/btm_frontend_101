@@ -59,6 +59,8 @@ export const userdata = [
   }
 ]
 
+// Landing Page - Navbar
+
 export const navLinks = [
   {
     id: "home",
@@ -77,6 +79,8 @@ export const navLinks = [
     title: "Nossos Clientes",
   },
 ];
+
+// Landing Page - Features
 
 export const features = [
   {
@@ -102,6 +106,8 @@ export const features = [
   },
 ];
 
+// Landing Page - Feedback
+
 export const feedback = [
   {
     id: "feedback-1",
@@ -121,6 +127,8 @@ export const feedback = [
   },
 ];
 
+// Landing Page - Stats
+
 export const stats = [
   {
     id: "stats-1",
@@ -138,6 +146,8 @@ export const stats = [
     value: "230M+",
   },
 ];
+
+// Landing Page - Footer Links
 
 export const footerLinks = [
   {
@@ -193,6 +203,8 @@ export const footerLinks = [
   },
 ];
 
+// Landing Page - SocialMedia
+
 export const socialMedia = [
   {
     id: "social-media-1",
@@ -216,6 +228,8 @@ export const socialMedia = [
   },
 ];
 
+// Landing Page - Clients
+
 export const clients = [
   {
     id: "client-1",
@@ -228,5 +242,149 @@ export const clients = [
   {
     id: "client-3",
     logo: sentinelone,
+  },
+];
+
+// Cards
+
+export const cardsData = [
+
+  // Registro
+
+  {
+    id: '1',
+    path: 'registro',
+    image: user,
+    name: 'Novo Usuário',
+    category: 'Usuário',
+    description:'',
+    href: '',
+  },
+  {
+    id: '2',
+    path: 'registro',
+    image: user,
+    name: 'API',
+    category: 'Produto',
+    description:'',
+    href: '',
+  },
+  {
+    id: '3',
+    path: 'registro',
+    image: user,
+    name: 'Logstash',
+    category: 'Produto',
+    description:'',
+    href: '',
+  },
+  {
+    id: '4',
+    path: 'registro',
+    image: user,
+    name: 'Novo Fornecedor',
+    category: 'Fornecedor',
+    description:'',
+    href: '',
+  },
+  {
+    id: '5',
+    path: 'registro',
+    image: user,
+    name: 'Nova Pipeline',
+    category: 'Pipeline',
+    description:'',
+    href: '',
+  },
+
+  // Registro - Pesquisar
+
+  {
+    id: '6',
+    path: 'pesquisar',
+    image: user,
+    name: 'Usuário',
+    category: '',
+    description:'',
+    href: '',
+  },
+  {
+    id: '7',
+    path: 'pesquisar',
+    image: user,
+    name: 'Produto',
+    category: '',
+    description:'',
+    href: '',
+  },
+  {
+    id: '8',
+    path: 'pesquisar',
+    image: user,
+    name: 'Fornecedor',
+    category: '',
+    description:'',
+    href: '',
+  },
+
+  // Deploy
+
+  {
+    id: '9',
+    path: 'deploy',
+    image: user,
+    name: 'Checar Status',
+    category: '',
+    description:'',
+    href: '',
+  },
+  {
+    id: '10',
+    path: 'deploy',
+    image: user,
+    name: 'Novo Deploy',
+    category: '',
+    description:'',
+    href: '',
+  },
+
+  // Battousai
+
+  {
+    id: '11',
+    path: 'battousai',
+    image: user,
+    name: 'Nova Role',
+    category: '',
+    description:'',
+    href: '',
+  },
+  {
+    id: '12',
+    path: 'battousai',
+    image: user,
+    name: 'Novo Usuário Battousai',
+    category: '',
+    description:'',
+    href: '',
+  },
+];
+
+// Cards
+export const cardsNav = [
+  {
+    name: 'all',
+  },
+  {
+    name: 'Usuário',
+  },
+  {
+    name: 'Produto',
+  },
+  {
+    name: 'Fornecedor',
+  },
+  {
+    name: 'Pipeline',
   },
 ];

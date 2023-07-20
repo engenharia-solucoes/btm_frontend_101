@@ -3,11 +3,16 @@ import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import { BiChevronLeft } from "react-icons/bi";
 
+// Pages 
 import Login from '../pages/Login';
 import Home from '../pages/Home'
 import Dashboard from '../pages/Dashboard'
 import Registro from '../pages/Registro';
+import Pesquisar from '../pages/Pesquisar';
+import Deploy from '../pages/Deploy';
+import Battousai from '../pages/Battousai'
 
+// Content
 import SidebarData from './SidebarData';
 import UserProfile from "./UserProfile";
 
@@ -68,7 +73,10 @@ const Sidebar = () => {
           <Routes>
             <Route exact path="/Dashboard" element={<Dashboard />} > </Route>
             <Route path="/Login" element={<Login />} > </Route>
-            <Route path="/Registro" element={<Registro />} > </Route>
+            <Route path="/Registro" element={<Registro toggle={toggle} />} > </Route>
+            <Route path="/Pesquisar" element={<Pesquisar toggle={toggle} />} > </Route>
+            <Route path="/Deploy" element={<Deploy toggle={toggle} />} > </Route>
+            <Route path="/Battousai" element={<Battousai toggle={toggle} />} > </Route>
             <Route path="/Home" element={<Home />} > </Route>
           </Routes>
         </motion.div>
